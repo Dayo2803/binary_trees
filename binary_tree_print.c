@@ -97,3 +97,7 @@ void binary_tree_print(const binary_tree_t *tree)
 	}
 	free(s);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d27b3c5 (solve task 2 and 3)
