@@ -7,6 +7,9 @@
 #include <string.h>
 #include <limits.h>
 
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
+
 /* Data Structures */
 
 /**
@@ -32,6 +35,7 @@ typedef struct binary_tree_s heap_t;
 
 /* Printing helper function */
 void binary_tree_print(const binary_tree_t *);
+
 
 /* Task function prototypes */
 void binary_tree_print(const binary_tree_t *);
