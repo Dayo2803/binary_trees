@@ -23,7 +23,6 @@ bst_t *find_min(bst_t *node)
 
 bst_t *bst_remove(bst_t *root, int value)
 {
-	/*Value not found in the tree*/
 	if (root == NULL)
 		return (NULL);
 
@@ -33,9 +32,6 @@ bst_t *bst_remove(bst_t *root, int value)
 		root->right = bst_remove(root->right, value);
 	else
 	{
-		/*Node with the value to be removed found*/
-
-		/*Case 1: Node with only one child or no child*/
 		if (root->left == NULL)
 		{
 			bst_t *temp = root->right;
@@ -51,14 +47,10 @@ bst_t *bst_remove(bst_t *root, int value)
 			return (temp);
 		}
 
-		/*Case 2: Node with two children*/
-		/*Get the in-order successor (smallest in the right subtree)*/
 		bst_t *temp = find_min(root->right);
 
-		/*Copy the in-order successor's value to this node*/
 		root->n = temp->n;
 
-		/*Delete the in-order successor*/
 		root->right = bst_remove(root->right, temp->n);
 	}
 
